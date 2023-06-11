@@ -1,0 +1,60 @@
+/* Overriding Bootstrap colors */
+.bg-primary {
+  background-color: #082b59 !important;
+}
+
+.border-secondary {
+  border-color: #d98555 !important;
+}
+
+.border-5 {
+  border-width: 0.5rem !important;
+}
+
+.active {
+  background-color: #d98555;
+}
+
+/* this style keeps the Gulp logo from taking over the whole page. Adjust if needed to size correctly for your page. */
+nav img,
+nav .img-fluid {
+  max-width: 150px;
+}
+
+/* navbar branding micro-interaction */
+a.navbar-brand img {
+  transition: all 0.2s ease-in-out;
+}
+
+a.navbar-brand:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(10px 10px 10px #333);
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* this animation causes the "Gulp Roast" logo to spin on hover. */
+@keyframes spin {
+  0% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(360deg);
+  }
+}
+.navbar-light button.navbar-toggler {
+  border-color: white;
+}
+.navbar-light button.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px white;
+}
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
+}
+
+.nav-item:not(.active):hover a {
+  text-decoration: underline;
+}/*# sourceMappingURL=styles.css.map */
