@@ -4,67 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module 20!</title>
-    <!-- jQuery -->
+    <!-- JavaScript: jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
+    <!-- JavaScript: Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
+    <!-- CSS: Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous" />
-    <!-- Bootstrap Icons CSS -->
+    <!-- CSS: Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-    <!-- Project CSS -->
+    <!-- Project JS & CSS -->
+    <script src="js/main.js"></script>      
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- Project JS -->
-    <script src="js/main.js"></script>
   </head>
   <body>
     <header class="border-bottom border-secondary border-5 mb-5">
-      <nav class="navbar navbar-expand-md bg-primary navbar-light">
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark">
         <div class="container-xl">
           <a class="navbar-brand" href="index.html">
             <img src="https://assets.codepen.io/6306176/gulp-logo-light.png" alt="Gulp Roast. Click for home." />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler border-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon text-white"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
-                  <span class="bi bi-house-door-fill icon d-block position-absolute"></span>
-                  <span class="caption d-block ps-4">About</span>
+                  <span class="bi bi-info-circle-fill icon d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ps-4">About</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
-                  <span class="bi bi-geo-alt-fill icon d-block position-absolute"></span>
-                  <span class="caption d-block ps-4">Locations</span>
+                  <span class="bi bi-geo-alt-fill icon d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ps-4">Locations</span>
                 </a>
               </li>
-              <li class="nav-item px-3 position-relative active rounded" aria-current="true">
+              <li class="nav-item px-3 position-relative active bg-secondary rounded" aria-current="true">
                 <a class="nav-link text-dark fs-5 pe-none" tabindex="-1" aria-disabled="true">
-                  <span class="bi bi-cup-hot-fill icon d-block position-absolute"></span>
-                  <span class="caption d-block ps-4">Coffee</span>
+                  <span class="bi bi-cup-hot-fill icon d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ps-4">Coffee</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
-                  <span class="bi bi-telephone-fill icon d-block position-absolute"></span>
-                  <span class="caption d-block ps-4">Contact</span>
+                  <span class="bi bi-telephone-fill icon d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ps-4">Contact</span>
                 </a>
               </li>
             </ul>
@@ -73,7 +72,7 @@
       </nav>
     </header>
 
-    <div class="container">
+    <main class="bg-white container">
       <section>
         <h1>Our Coffee Products</h1>
         <p>ADD DESCRIPTION HERE for coffee</p>
@@ -88,7 +87,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel1" class="carousel slide text-white rounded-pill">
+                <div id="carousel1" class="carousel slide bg-primary text-white rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Bourbon</span>
@@ -134,7 +133,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel2" class="carousel slide text-white rounded-pill">
+                <div id="carousel2" class="carousel slide bg-primary text-white rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Dark Chocolate</span>
@@ -183,7 +182,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel3" class="carousel slide text-white rounded-pill">
+                <div id="carousel3" class="carousel slide bg-primary text-white rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Cherry</span>

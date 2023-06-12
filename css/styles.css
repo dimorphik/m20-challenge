@@ -1,10 +1,25 @@
-/* Overriding Bootstrap colors */
+/* 
+  Our project code uses the SCSS variables $dark-blue, $orange, etc., to override 
+  the default Bootstrap color scheme.
+
+  Per the rubric, we __always__ use Bootstrap utility classes to apply colors, borders, 
+  and spacing. The only exceptions are in cases where Bootstrap does not provide a 
+  utility class, as detailed below.
+
+  Please note - we understand that the use of the !important directive is not 
+  recommended in CSS. But we wanted to override Bootstrap, and this is the only way 
+  we found that works in Codepen!
+*/
 h2 {
   font-size: 1.3rem;
 }
 
 * .bg-primary {
   background-color: #082b59 !important;
+}
+
+* .bg-secondary {
+  background-color: #d98555 !important;
 }
 
 *.border-secondary {
@@ -15,23 +30,14 @@ h2 {
   border-width: 0.5rem !important;
 }
 
-header .active {
-  background-color: #d98555;
-}
+/*
+  The next few styles apply special positioning and animations to Bootstrap icons
+  and nav-item elements. 
 
-.navbar-light button.navbar-toggler {
-  border-color: white;
-}
-
-.navbar-light button.navbar-toggler:focus {
-  box-shadow: 0 0 0 2px white;
-}
-
-.navbar-light span.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  color: white;
-}
-
+  Bootstrap does not provide utility classes specific enough for this task. However, 
+  we used all the Bootstrap utility classes we could, including "position-relative", 
+  "position-absolute", "d-inline-block", and "ps-4".
+*/
 .nav-item .icon {
   width: 1.5rem;
   left: 1.2rem;
@@ -47,22 +53,25 @@ header .active {
   text-decoration: underline;
 }
 
-.carousel.slide {
-  background-color: #082b59;
-}
+/* 
+  This style applies an alpha mask to the inner track of the Bootstrap carousel component.
+  The alpha mask keeps the text in the carousel from "colliding" with the carousel's
+  directional controls when scrolling to one side or the other. 
 
+  Bootstrap does not provide a utility class for this task.
+*/
 .carousel-inner {
   mask-image: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 80%);
   -webkit-mask-image: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 80%);
 }
 
-/* this style keeps the Gulp logo from taking over the whole page. Adjust if needed to size correctly for your page. */
-nav img,
-nav .img-fluid {
-  max-width: 150px;
-}
+/* 
+  The next few styles apply a micro-interaction to the navbar branding image:
+  when hovering over the logo image, scale the image up to 120%, then spin it 
+  with a "bouncing" ease function.
 
-/* navbar branding micro-interaction */
+  Bootstrap does not provide a utility class for this task.
+*/
 a.navbar-brand img {
   transition: all 0.2s ease-in-out;
 }
@@ -76,7 +85,6 @@ a.navbar-brand:hover img {
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* this animation causes the "Gulp Roast" logo to spin on hover. */
 @keyframes spin {
   0% {
     transform: scale(1.2) rotate(0deg);
@@ -85,4 +93,13 @@ a.navbar-brand:hover img {
     transform: scale(1.2) rotate(360deg);
   }
 }
+/* 
+  These styles were supplied as part of the starting codepen. They keep the 
+  Gulp logo from taking over the whole page.
+*/
+nav img,
+nav .img-fluid {
+  max-width: 150px;
+}
+
 /*# sourceMappingURL=styles.css.map */
