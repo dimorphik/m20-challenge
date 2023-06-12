@@ -1,4 +1,8 @@
 /* Overriding Bootstrap colors */
+h2 {
+  font-size: 1.3rem;
+}
+
 .bg-primary {
   background-color: #082b59 !important;
 }
@@ -11,7 +15,7 @@
   border-width: 0.5rem !important;
 }
 
-.active {
+header .active {
   background-color: #d98555;
 }
 
@@ -28,8 +32,28 @@
   color: white;
 }
 
-.nav-item:not(.active):hover a {
+.nav-item .icon {
+  width: 1.5rem;
+  left: 1.2rem;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-item:not(.active):hover .icon {
+  font-size: 2rem;
+  margin-top: -0.7rem;
+  margin-left: -0.35rem;
+}
+.nav-item:not(.active):hover .caption {
   text-decoration: underline;
+}
+
+.carousel.slide {
+  background-color: #082b59;
+}
+
+.carousel-inner {
+  mask-image: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: radial-gradient(circle, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 80%);
 }
 
 /* this style keeps the Gulp logo from taking over the whole page. Adjust if needed to size correctly for your page. */
@@ -61,3 +85,4 @@ a.navbar-brand:hover img {
     transform: scale(1.2) rotate(360deg);
   }
 }
+/*# sourceMappingURL=styles.css.map */
