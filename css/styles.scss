@@ -6,15 +6,15 @@ h2 {
   font-size: 1.3rem;
 }
 
-.navbar.bg-primary {
+* .bg-primary {
   background-color: $dark-blue !important;
 }
 
-header.border-secondary {
+*.border-secondary {
   border-color: $orange !important;
 }
 
-header.border-5 {
+*.border-5 {
   border-width: 0.5rem !important;
 }
 
