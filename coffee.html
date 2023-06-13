@@ -4,107 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module 20!</title>
-    <!-- jQuery -->
+    <!-- JavaScript: jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
+    <!-- JavaScript: Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
+    <!-- CSS: Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous" />
-    <!-- Project CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Project JS -->
+    <!-- CSS: Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- Project JS & CSS -->
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="bg-$blue-700 border-bottom border-secondary border-5 mb-5">
-      <nav class="navbar navbar-expand-md bg-primary">
+    <header class="border-bottom border-secondary border-5 mb-5">
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark">
         <div class="container-xl">
           <a class="navbar-brand" href="index.html">
             <img src="https://assets.codepen.io/6306176/gulp-logo-light.png" alt="Gulp Roast. Click for home." />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler border-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon text-white"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-light fs-4" href="https://uxuicurriculum.wixsite.com/gulproast">About</a>
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <span class="bi bi-info-circle-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">About</span>
+                </a>
               </li>
-              <li class="nav-item">
-                <a href="https://uxuicurriculum.wixsite.com/gulproast" class="nav-link text-light fs-4">Locations</a>
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <span class="bi bi-geo-alt-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Locations</span>
+                </a>
               </li>
-              <li class="nav-item active bg-dark rounded" aria-current="true">
-                <a href="https://uxuicurriculum.wixsite.com/gulproast" class="nav-link text-light fs-4">Coffee</a>
+              <li class="nav-item px-3 position-relative active bg-secondary rounded" aria-current="true">
+                <a class="nav-link text-dark fs-5 pe-none" tabindex="-1" aria-disabled="true">
+                  <span class="bi bi-cup-hot-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Coffee</span>
+                </a>
               </li>
-              <li class="nav-item">
-                <a href="https://uxuicurriculum.wixsite.com/gulproast" class="nav-link text-light fs-4">Contact</a>
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <span class="bi bi-telephone-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Contact</span>
+                </a>
               </li>
+              <!--
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <span class="bi bi-cart d-inline-block position-absolute"></span>
+                  <span class="badge d-inline-block ms-sm-2 ms-md-0 ps-4">0</span>
+                </a>
+              </li>
+              -->
             </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    <div class="container-xl">
+    <main class="bg-white container-xl">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Our Coffee Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Columbian-Blended Espresso Beans</li>
+        </ol>
+      </nav>
+
       <section>
         <h1>Columbian-Blended Espresso Beans</h1>
 
         <div class="row">
-          <article class="col-sm-6 px-0">
+          <article class="col-sm-5 ms-auto px-0">
             <img src="https://assets.codepen.io/6306176/gulp-espresso.jpg" alt="gulp espresso" class="img-fluid" />
           </article>
 
-          <article class="col-sm-6 px-0">
-            <p class="fst-italic">Bourbon &middot; Cherry &middot; Milk Chocolate</p>
+          <article class="col-sm-5 me-auto ps-4">
             <p>
               With our Columbian-Blended Espresso Beans, you can finally feel like a professional barista. Bright and
               clean with an intense burst of flavor, these full-bodied beans strike a perfect balance between the most
               delicate roasts and fruitful aromas.
             </p>
 
-            <p class="fw-bold">Recommended brew method:</p>
-            <p>Espresso Machine</p>
+            <p class="fw-bold">
+              Recommended brew method: <span class="badge bg-primary text-light">Espresso Machine</span>
+            </p>
             <div class="col-sm">
               <p>Sizes available</p>
             </div>
 
-            <div id="carouselSize" class="carousel slide bg-primary text-white">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <span class="d-block text-center w-100">12 oz: $20</span>
-                </div>
-                <div class="carousel-item">
-                  <span class="d-block text-center w-100">5 lb: $90</span>
-                </div>
-              </div>
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSize" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselSize" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">12 oz: $20</button>
+              <button type="button" class="btn btn-primary">5 lb: $90</button>
             </div>
           </article>
         </div>
+
+        <article class="col-sm-10 mx-auto px-0">
+          <p class="fw-bold">Flavor Profile:</p>
+
+          <div class="accordion" id="accordion1">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#bourbon"
+                  aria-expanded="true"
+                  aria-controls="bourbon">
+                  Bourbon
+                </button>
+              </h2>
+              <div id="bourbon" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Indulge in the rich and captivating allure of our coffee, infused with an enchanting flavor profile
+                  reminiscent of smooth bourbon, delivering a truly sophisticated and irresistible experience.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#cherry"
+                  aria-expanded="false"
+                  aria-controls="cherry">
+                  Cherry
+                </button>
+              </h2>
+              <div id="cherry" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Experience the delightful harmony of our coffee, infused with the luscious flavor profile of ripe
+                  cherries, offering a tantalizingly fruity and refreshing cup that will transport your taste buds to
+                  pure bliss.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#milk-chocolate"
+                  aria-expanded="false"
+                  aria-controls="milk-chocolate">
+                  Milk Chocolate
+                </button>
+              </h2>
+              <div id="milk-chocolate" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Savor the exquisite pleasures of our coffee, crafted with the velvety flavor profile of creamy milk
+                  chocolate, creating a luxurious and decadent cup that will envelop your senses in pure chocolatey
+                  indulgence.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
-    </div>
+    </main>
 
     <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-white">
       <div class="container-sm">
