@@ -25,69 +25,90 @@
   </head>
   <body>
     <header class="border-bottom border-secondary border-5 mb-5">
+      <!-- navbar component -->
       <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-        <div class="container-xl">
+        <div class="container container-xl">
           <a class="navbar-brand" href="index.html">
             <img src="https://assets.codepen.io/6306176/gulp-logo-light.png" alt="Gulp Roast. Click for home." />
           </a>
           <button
-            class="navbar-toggler border-white"
+            class="navbar-toggler border-light"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navContent"
+            aria-controls="navContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white"></span>
+            <span class="navbar-toggler-icon text-light"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-info-circle-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">About</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-geo-alt-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Locations</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative active bg-secondary rounded" aria-current="true">
+                <!-- This link is disabled on the product listing page; on the product detail pages, it leads back to the listing page. -->
                 <a class="nav-link text-dark fs-5 pe-none" tabindex="-1" aria-disabled="true">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-cup-hot-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Coffee</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-telephone-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Contact</span>
                 </a>
               </li>
-              <!--
-              <li class="nav-item px-3 position-relative">
-                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
-                  <span class="bi bi-cart d-inline-block position-absolute"></span>
-                  <span class="badge d-inline-block ms-sm-2 ms-md-0 ps-4">0</span>
-                </a>
-              </li>
-              -->
             </ul>
           </div>
         </div>
       </nav>
+      <!-- end navbar component -->
     </header>
 
-    <main class="bg-white container-xl">
+    <!-- 
+      Boostrap components used on this page: 
+      
+      with JavaScript: Carousel
+      without JavaScript: Card, Button
+    -->
+    <main class="bg-light container container-xl">
       <section>
-        <h1>Our Coffee Products</h1>
-        <p>ADD DESCRIPTION HERE for coffee</p>
+        <h1 class="text-center">Our Coffee Products</h1>
+        <p class="mx-3">
+          Gulp Roast Coffee is committed to sourcing the finest coffee beans globally. We offer exceptional flavors and
+          quality, available through our store, retail partners, and farmers' markets, ensuring everyone can elevate
+          their coffee experience with the aromatic delight of Gulp Roast Coffee.
+        </p>
         <div class="row">
+          <!-- 
+            The responsive strategy for cards on the product listing page is as follows:
+
+            - from the small form factor down, the cards take 8 columns and are centered on the screen:
+              "col-sm-8 mx-sm-auto"
+            - at the medium form factor, the cards display in two rows: two on the first row and one
+              (centered) on the second row:
+              "col-md-6 mx-md-auto"
+            - at the large form factor and up, all three cards appear side-by-side:
+              "col-lg-4."
+          -->
           <div class="col-sm-8 mx-sm-auto col-md-6 mx-md-auto col-lg-4 d-flex">
+            <!-- begin card -->
             <div class="card bg-light text-dark">
-              <h2 class="card-header text-center">Columbian-Blended<br />Espresso Beans</h2>
+              <h2 class="card-header text-center bg-primary text-light py-3">Columbian-Blended<br />Espresso Beans</h2>
               <img
                 src="https://assets.codepen.io/6306176/gulp-espresso.jpg"
                 alt="Columbian-Blended Espresso Beans."
@@ -95,7 +116,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel1" class="carousel slide py-2 bg-primary text-white rounded-pill">
+                <div id="carousel1" class="carousel slide py-2 bg-primary text-light rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Bourbon</span>
@@ -115,25 +136,20 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-                <!-- <p class="fst-italic">Bourbon &middot; Cherry &middot; Milk Chocolate</p> -->
-                <!-- <p>
-                  With our Columbian-Blended Espresso Beans, you can finally feel like a professional barista. Bright
-                  and clean with an intense burst of flavor, these full-bodied beans strike a perfect balance between
-                  the most delicate roasts and fruitful aromas.
-                </p> -->
               </div>
 
               <div class="card-footer text-center">
                 <p>
-                  <a href="coffee.html" class="btn btn-outline-dark">Learn More</a>
+                  <a href="coffee-columbian-blended.html" class="btn btn-outline-dark mt-3">Learn More</a>
                 </p>
               </div>
             </div>
-            <!-- closing card -->
+            <!-- end card -->
           </div>
           <div class="col-sm-8 mx-sm-auto mt-sm-4 col-md-6 mx-md-auto mt-md-0 col-lg-4 mt-lg-0 d-flex">
+            <!-- begin card -->
             <div class="card bg-light text-dark">
-              <h2 class="card-header text-center">Triple-Blended<br />Coffee Beans</h2>
+              <h2 class="card-header text-center bg-primary text-light py-3">Triple-Blended<br />Coffee Beans</h2>
               <img
                 src="https://assets.codepen.io/6306176/gulp-triple-blended.jpg"
                 alt="Triple-Blended Coffee Beans."
@@ -141,7 +157,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel2" class="carousel slide py-2 bg-primary text-white rounded-pill">
+                <div id="carousel2" class="carousel slide py-2 bg-primary text-light rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Dark Chocolate</span>
@@ -161,27 +177,20 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-
-                <!--<p class="fst-italic">Dark Chocolate &middot; Caramel &middot; Papaya</p> -->
-                <!--
-                <p>
-                  Skillfully roasted and carefully blended, our Triple-Blended Coffee Beans don’t just wake you up in
-                  the morning, they pack a lasting punch that's sure to leave you wanting more. With silky smoothness
-                  and layered flavors, there’s really no better way to start your day.
-                </p>
-                -->
               </div>
+
               <div class="card-footer text-center">
                 <p>
-                  <a href="https://uxuicurriculum.wixsite.com/gulproast" class="btn btn-outline-dark">Learn More</a>
+                  <a href="coffee-triple-blended.html" class="btn btn-outline-dark mt-3">Learn More</a>
                 </p>
               </div>
             </div>
-            <!-- closing card -->
+            <!-- end card -->
           </div>
           <div class="col-sm-8 mx-sm-auto mt-sm-4 col-md-6 mx-md-auto mt-md-4 col-lg-4 mt-lg-0 d-flex">
+            <!-- begin card -->
             <div class="card bg-light text-dark">
-              <h2 class="card-header text-center">Lightly Roasted<br />Coffee Beans</h2>
+              <h2 class="card-header text-center bg-primary text-light py-3">Lightly Roasted<br />Coffee Beans</h2>
               <img
                 src="https://assets.codepen.io/6306176/gulp-light-roast.jpg"
                 alt="Lightly Roasted Coffee Beans."
@@ -190,7 +199,7 @@
               <div class="card-body">
                 <p class="fw-bold">Flavor Profile:</p>
 
-                <div id="carousel3" class="carousel slide py-2 bg-primary text-white rounded-pill">
+                <div id="carousel3" class="carousel slide py-2 bg-primary text-light rounded-pill">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <span class="d-block text-center w-100">Cherry</span>
@@ -210,35 +219,27 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-
-                <!--
-                <p>
-                  Our Lightly Roasted Coffee Beans offer the world a chance to brighten every day with a whole lot of
-                  flavor and inspiration. Try these to receive the perfect balance between bold flavor and subtle
-                  sweetness.
-                </p>
-              --></div>
+              </div>
               <div class="card-footer text-center">
                 <p>
-                  <a href="https://uxuicurriculum.wixsite.com/gulproast" class="btn btn-outline-dark">Learn More</a>
+                  <a href="coffee-lightly-roasted.html" class="btn btn-outline-dark mt-3">Learn More</a>
                 </p>
               </div>
             </div>
-            <!-- closing card -->
+            <!-- end card -->
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-white">
+    <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-light">
       <div class="container-sm">
         <p>&copy;2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</p>
         <p>
-          <small
-            >This site is operated by Trilogy Education Services for educational purposes only. This is not a coffee
-            products website. This is a fictitious company and scenario intended only for internal academic
-            purposes.</small
-          >
+          <small>
+            This site is operated by Trilogy Education Services for educational purposes only. This is not a coffee
+            products website. This is a fictitious company and scenario intended only for internal academic purposes.
+          </small>
         </p>
       </div>
     </footer>

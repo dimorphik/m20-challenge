@@ -25,99 +25,106 @@
   </head>
   <body>
     <header class="border-bottom border-secondary border-5 mb-5">
+      <!-- navbar component -->
       <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-        <div class="container-xl">
+        <div class="container container-xl">
           <a class="navbar-brand" href="index.html">
             <img src="https://assets.codepen.io/6306176/gulp-logo-light.png" alt="Gulp Roast. Click for home." />
           </a>
           <button
-            class="navbar-toggler border-white"
+            class="navbar-toggler border-light"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navContent"
+            aria-controls="navContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white"></span>
+            <span class="navbar-toggler-icon text-light"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-info-circle-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">About</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-geo-alt-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Locations</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative active bg-secondary rounded" aria-current="true">
+                <!-- This link is disabled on the product listing page; on the product detail pages, it leads back to the listing page. -->
                 <a class="nav-link text-dark fs-5" href="index.html" tabindex="-1" aria-disabled="true">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-cup-hot-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Coffee</span>
                 </a>
               </li>
               <li class="nav-item px-3 position-relative">
                 <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
                   <span class="bi bi-telephone-fill d-inline-block position-absolute"></span>
                   <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Contact</span>
                 </a>
               </li>
-              <!--
-              <li class="nav-item px-3 position-relative">
-                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
-                  <span class="bi bi-cart d-inline-block position-absolute"></span>
-                  <span class="badge d-inline-block ms-sm-2 ms-md-0 ps-4">0</span>
-                </a>
-              </li>
-              -->
             </ul>
           </div>
         </div>
       </nav>
+      <!-- end navbar component -->
     </header>
 
-    <main class="bg-white container-xl">
-      <nav aria-label="breadcrumb">
+    <main class="bg-light container container-xl">
+      <nav class="row px-3 mb-3" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Our Coffee Products</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Columbian-Blended Espresso Beans</li>
+          <li class="breadcrumb-item active" aria-current="page">Triple-Blended Coffee Beans</li>
         </ol>
       </nav>
 
-      <section>
-        <h1>Columbian-Blended Espresso Beans</h1>
+      <section class="row">
+        <!--
+          The responsive strategy for content on the product detail pages is as follows:
 
-        <div class="row">
-          <article class="col-10 mx-auto mx-sm-auto px-0 col-md-5 ms-md-auto me-md-0">
-            <img src="https://assets.codepen.io/6306176/gulp-espresso.jpg" alt="gulp espresso" class="img-fluid" />
-          </article>
+          - at the small form factor and downward, all elements are stacked vertically and centered:
+            "col-10 mx-auto mb-3 px-0 mx-sm-auto "
+          - at the medium form factor, the product image and text/control area appear side-by-side
+            while the accordion appears beneath them:
+            "col-md-6 mx-md-0 mb-md-0"
+          - at the large form factor and up, the same layout as the medium form factor is used.
+        -->
+        <h1 class="text-center mb-4">Triple-Blended Coffee Beans</h1>
+        <article class="col-10 mx-auto mx-sm-auto px-0 col-md-6 mx-md-0 mb-3 mb-md-0">
+          <img
+            src="https://assets.codepen.io/6306176/gulp-triple-blended.jpg"
+            alt="gulp espresso"
+            class="img-fluid w-100 rounded-5 border border-primary shadow-sm" />
+        </article>
 
-          <article class="col-10 mx-auto col-sm-10 col-sm-5 col-md-5 ms-md-0 me-md-auto ps-4">
-            <p>
-              With our Columbian-Blended Espresso Beans, you can finally feel like a professional barista. Bright and
-              clean with an intense burst of flavor, these full-bodied beans strike a perfect balance between the most
-              delicate roasts and fruitful aromas.
-            </p>
+        <article class="col-10 mx-auto px-0 col-sm-10 col-md-6 mx-md-0 ps-md-3 pe-md-0">
+          <p>
+            Skillfully roasted and carefully blended, our Triple-Blended Coffee Beans don’t just wake you up in the
+            morning, they pack a lasting punch that's sure to leave you wanting more. With silky smoothness and layered
+            flavors, there’s really no better way to start your day.
+          </p>
 
-            <p class="fw-bold">
-              Recommended brew method: <span class="badge bg-primary text-light">Espresso Machine</span>
-            </p>
-            <div class="col-sm">
-              <p>Sizes available</p>
-            </div>
+          <p class="fw-bold">Recommended brew method: <span class="badge bg-primary text-light">French Press</span></p>
+          <div class="col-sm">
+            <p>Sizes available</p>
+          </div>
 
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-primary">12 oz: $20</button>
-              <button type="button" class="btn btn-primary">5 lb: $90</button>
-            </div>
-          </article>
-        </div>
+          <div role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-primary">12 oz: $18</button>
+            <button type="button" class="btn btn-outline-primary">5 lb: $85</button>
+          </div>
+        </article>
 
-        <article class="col-sm-10 mx-auto px-0">
+        <article class="mx-auto px-0 mt-3 col-10 col-md-12">
           <p class="fw-bold">Flavor Profile:</p>
 
           <div class="accordion" id="accordion1">
@@ -127,16 +134,17 @@
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#bourbon"
+                  data-bs-target="#dark-chocolate"
                   aria-expanded="true"
-                  aria-controls="bourbon">
-                  Bourbon
+                  aria-controls="dark-chocolate">
+                  Dark Chocolate
                 </button>
               </h2>
-              <div id="bourbon" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+              <div id="dark-chocolate" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
                 <div class="accordion-body">
-                  Indulge in the rich and captivating allure of our coffee, infused with an enchanting flavor profile
-                  reminiscent of smooth bourbon, delivering a truly sophisticated and irresistible experience.
+                  Awaken your senses to the sublime depths of our coffee, meticulously infused with the bold and
+                  sophisticated flavor profile of rich dark chocolate, delivering a truly indulgent and intense
+                  experience that will captivate chocolate lovers.
                 </div>
               </div>
             </div>
@@ -146,17 +154,17 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#cherry"
+                  data-bs-target="#caramel"
                   aria-expanded="false"
-                  aria-controls="cherry">
-                  Cherry
+                  aria-controls="caramel">
+                  Caramel
                 </button>
               </h2>
-              <div id="cherry" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+              <div id="caramel" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                 <div class="accordion-body">
-                  Experience the delightful harmony of our coffee, infused with the luscious flavor profile of ripe
-                  cherries, offering a tantalizingly fruity and refreshing cup that will transport your taste buds to
-                  pure bliss.
+                  Indulge in the irresistible allure of our coffee, carefully crafted with a velvety smooth flavor
+                  profile of buttery caramel, creating a harmonious blend that will satisfy your sweetest cravings and
+                  leave you longing for more.
                 </div>
               </div>
             </div>
@@ -166,17 +174,17 @@
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#milk-chocolate"
+                  data-bs-target="#papaya"
                   aria-expanded="false"
-                  aria-controls="milk-chocolate">
-                  Milk Chocolate
+                  aria-controls="papaya">
+                  Papaya
                 </button>
               </h2>
-              <div id="milk-chocolate" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+              <div id="papaya" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                 <div class="accordion-body">
-                  Savor the exquisite pleasures of our coffee, crafted with the velvety flavor profile of creamy milk
-                  chocolate, creating a luxurious and decadent cup that will envelop your senses in pure chocolatey
-                  indulgence.
+                  Embark on a tropical journey with our coffee, infused with the exotic flavor profile of juicy papaya,
+                  delivering a delightful and refreshing cup that will transport you to sun-kissed beaches with every
+                  sip.
                 </div>
               </div>
             </div>
@@ -185,7 +193,7 @@
       </section>
     </main>
 
-    <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-white">
+    <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-light">
       <div class="container-sm">
         <p>&copy;2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</p>
         <p>

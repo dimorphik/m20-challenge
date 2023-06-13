@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 20!</title>
+    <!-- JavaScript: jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- JavaScript: Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <!-- CSS: Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+    <!-- CSS: Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- Project JS & CSS -->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="border-bottom border-secondary border-5 mb-5">
+      <!-- navbar component -->
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <div class="container container-xl">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://assets.codepen.io/6306176/gulp-logo-light.png" alt="Gulp Roast. Click for home." />
+          </a>
+          <button
+            class="navbar-toggler border-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navContent"
+            aria-controls="navContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-light"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
+                  <span class="bi bi-info-circle-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">About</span>
+                </a>
+              </li>
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
+                  <span class="bi bi-geo-alt-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Locations</span>
+                </a>
+              </li>
+              <li class="nav-item px-3 position-relative active bg-secondary rounded" aria-current="true">
+                <!-- This link is disabled on the product listing page; on the product detail pages, it leads back to the listing page. -->
+                <a class="nav-link text-dark fs-5" href="index.html" tabindex="-1" aria-disabled="true">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
+                  <span class="bi bi-cup-hot-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Coffee</span>
+                </a>
+              </li>
+              <li class="nav-item px-3 position-relative">
+                <a class="nav-link text-light fs-5" href="https://uxuicurriculum.wixsite.com/gulproast" target="_blank">
+                  <!-- Bootstrap icons are styled in the project SCSS as well as with Bootstrap utility classes -->
+                  <span class="bi bi-telephone-fill d-inline-block position-absolute"></span>
+                  <span class="caption d-inline-block ms-sm-2 ms-md-0 ps-4">Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end navbar component -->
+    </header>
+
+    <main class="bg-light container container-xl">
+      <nav class="row px-3 mb-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Our Coffee Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Lightly Roasted Coffee Beans</li>
+        </ol>
+      </nav>
+
+      <section class="row">
+        <!--
+          The responsive strategy for content on the product detail pages is as follows:
+
+          - at the small form factor and downward, all elements are stacked vertically and centered:
+            "col-10 mx-auto mb-3 px-0 mx-sm-auto "
+          - at the medium form factor, the product image and text/control area appear side-by-side
+            while the accordion appears beneath them:
+            "col-md-6 mx-md-0 mb-md-0"
+          - at the large form factor and up, the same layout as the medium form factor is used.
+        -->
+        <h1 class="text-center mb-4">Lightly Roasted Coffee Beans</h1>
+        <article class="col-10 mx-auto mx-sm-auto px-0 col-md-6 mx-md-0 mb-3 mb-md-0">
+          <img
+            src="https://assets.codepen.io/6306176/gulp-light-roast.jpg"
+            alt="gulp espresso"
+            class="img-fluid w-100 rounded-5 border border-primary shadow-sm" />
+        </article>
+
+        <article class="col-10 mx-auto px-0 col-sm-10 col-md-6 mx-md-0 ps-md-3 pe-md-0">
+          <p>
+            Our Lightly Roasted Coffee Beans offer the world a chance to brighten every day with a whole lot of flavor
+            and inspiration. Try these to receive the perfect balance between bold flavor and subtle sweetness.
+          </p>
+
+          <p class="fw-bold">Recommended brew method: <span class="badge bg-primary text-light">Aeropress</span></p>
+          <div class="col-sm">
+            <p>Sizes available</p>
+          </div>
+
+          <div role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-primary">12 oz: $18</button>
+            <button type="button" class="btn btn-outline-primary">5 lb: $85</button>
+          </div>
+        </article>
+
+        <article class="mx-auto px-0 mt-3 col-10 col-md-12">
+          <p class="fw-bold">Flavor Profile:</p>
+
+          <div class="accordion" id="accordion1">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#cherry"
+                  aria-expanded="true"
+                  aria-controls="cherry">
+                  Cherry
+                </button>
+              </h2>
+              <div id="cherry" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Experience the delightful harmony of our coffee, infused with the luscious flavor profile of ripe
+                  cherries, offering a tantalizingly fruity and refreshing cup that will transport your taste buds to
+                  pure bliss.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mangosteen"
+                  aria-expanded="false"
+                  aria-controls="mangosteen">
+                  Mangosteen
+                </button>
+              </h2>
+              <div id="mangosteen" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Discover a captivating paradise in each sip of our coffee, as the enchanting flavor profile of
+                  succulent mangosteen takes you on a tantalizing journey of exotic sweetness and blissful indulgence.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#fig"
+                  aria-expanded="false"
+                  aria-controls="fig">
+                  Fig
+                </button>
+              </h2>
+              <div id="fig" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  Immerse yourself in the enchanting world of flavors with our coffee, delicately infused with the rich
+                  and velvety essence of ripe fig, offering a unique and captivating cup that intertwines sweetness and
+                  sophistication.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="border-secondary border-top border-5 text-center py-5 mt-5 bg-primary text-light">
+      <div class="container-sm">
+        <p>&copy;2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</p>
+        <p>
+          <small
+            >This site is operated by Trilogy Education Services for educational purposes only. This is not a coffee
+            products website. This is a fictitious company and scenario intended only for internal academic
+            purposes.</small
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

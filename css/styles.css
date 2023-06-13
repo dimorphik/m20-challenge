@@ -14,12 +14,16 @@ h2 {
   font-size: 1.3rem;
 }
 
-* .bg-primary {
+*.bg-primary {
   background-color: #082b59 !important;
 }
 
-* .bg-secondary {
+*.bg-secondary {
   background-color: #d98555 !important;
+}
+
+*.border-primary {
+  border-color: #082b59 !important;
 }
 
 *.border-secondary {
@@ -63,6 +67,60 @@ h2 {
 .carousel-inner {
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* 
+  The following styles apply to the Bootstrap accordion component. We've added some 
+  state-specific rules, staying consistent with the page's color scheme when an 
+  accordion item is selected and also removing all box shadow effects. We also added
+  a subtle fade animation when an accordion item id displayed.
+
+  Bootstrap does not provide a utility class for these tasks. 
+*/
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #082b59;
+  color: white;
+  box-shadow: none;
+  /* This rule changes the color of the active accordion-button's arrow icon to white. */
+}
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0%) invert(100%);
+}
+
+.accordion-body {
+  position: relative;
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn-outline-primary {
+  border-color: #082b59;
+  color: #082b59;
+}
+.btn-outline-primary:hover {
+  border-color: #082b59;
+  background-color: #082b59;
+}
+
+.btn-outline-dark {
+  border-color: #082b59;
+  color: #082b59;
+}
+.btn-outline-dark:hover {
+  border-color: #d98555;
+  background-color: #d98555;
 }
 
 /* 
